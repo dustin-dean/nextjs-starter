@@ -1,70 +1,70 @@
-# Next.js Starter Kit with Drizzle ORM and Tailwind CSS
+# EHR SaaS Application
 
-A modern web application starter template built with Next.js, Drizzle ORM, and Tailwind CSS.
+## Description
 
-## Prerequisites
+A modern, multi-tenant Electronic Health Records (EHR) SaaS application tailored for solo and small clinic practitioners. The platform offers features such as clinic management, appointment scheduling, patient portals, inventory management, and billing. Designed with robust data segregation, it ensures that each owner’s data is secure and independent. Practitioners can manage multiple clinics, patients can book appointments online, and owners can oversee operations effortlessly.
 
-- Node.js 16.8 or later
-- npm or yarn package manager
-- PostgreSQL database
+## Tech Stack
 
-## Installation
+- **Backend**: NextJS, PostgreSQL
+- **Frontend**: Shadcn, Tailwind CSS
+- **Authentication**: Better Auth
+- **Deployment**: Docker, Caddy Server
 
-1. Clone the repository:
+## MVP Features
 
-```bash
-git clone https://github.com/yourusername/your-project-name.git
-cd your-project-name
-```
+### Phase 1
 
-2. Install dependencies:
+1. **User Roles and Permissions**:
 
-```bash
-npm install
-# or
-yarn install
-```
+   - Owner, Practitioner, Staff, Patient roles with RBAC.
 
-3. Configure environment variables:
+2. **Clinic Management**:
 
-```bash
-cp .env.example .env.local
-```
+   - Owners can create and manage multiple clinics.
 
-Edit `.env.local` with your database credentials and other configuration.
+3. **Practitioner and Staff Management**:
 
-4. Set up the database:
+   - Add and manage practitioners and staff for each clinic.
 
-```bash
-npm run db:push
-# or
-yarn db:push
-```
+4. **Patient Management**:
 
-5. Start the development server:
+   - Patients can belong to multiple clinics.
+   - Patient portal for online appointment booking.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+5. **Appointment Scheduling**:
 
-## Features
+   - Patients can book appointments with practitioners.
+   - Practitioners and staff can manage their schedules.
 
-- ⚡ Next.js 13+ with App Router
-- 🎨 Tailwind CSS for styling
-- 🗃️ Drizzle ORM for database operations
-- 🔒 Environment variable configuration
-- 📱 Responsive design
+6. **Inventory Management**:
 
-## Scripts
+   - Centralized inventory with the ability to transfer items between clinics.
 
-- `dev` - Start development server
-- `build` - Build for production
-- `start` - Start production server
-- `db:push` - Push database schema changes
-- `lint` - Run ESLint
+7. **Billing and Invoices**:
 
-## License
+   - Generate and manage invoices per clinic.
 
-MIT
+8. **Security and Multi-Tenancy**:
+   - Data segregation ensuring one owner cannot access another’s data.
+
+### Phase 2
+
+1. **Audit Logs**:
+
+   - Track all changes made to patient data, inventory, billing, and appointments.
+
+2. **Analytics and Reporting**:
+
+   - Provide detailed reports for owners on clinic performance, patient metrics, and revenue.
+
+3. **Communication Features**:
+
+   - Email/SMS notifications for appointments, billing, and reminders.
+
+4. **Localization**:
+
+   - Support for multiple languages and regional compliance.
+
+5. **Advanced Inventory**:
+   - Automated inventory alerts for low stock.

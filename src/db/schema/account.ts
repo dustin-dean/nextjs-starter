@@ -5,7 +5,8 @@ import user from "./user";
 // Import the users table
 
 // Account Table Schema
-const account = pgTable("account", {
+
+export const account = pgTable("account", {
   id: text("id").primaryKey(),
   accountId: text("account_id").notNull(),
   providerId: text("provider_id").notNull(),

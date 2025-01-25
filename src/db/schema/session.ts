@@ -5,7 +5,7 @@ import user from "./user";
 // Import the users table
 
 // Session Table Schema
-const session = pgTable("session", {
+export const session = pgTable("session", {
   id: text("id").primaryKey(),
   expiresAt: timestamp("expires_at").notNull(),
   token: text("token").notNull().unique(),
@@ -16,6 +16,7 @@ const session = pgTable("session", {
   userId: text("user_id")
     .notNull()
     .references(() => user.id),
+  activeOrganizationId: text("active_organization_id"),
 });
 
 export default session;
